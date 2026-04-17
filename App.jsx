@@ -5,7 +5,9 @@ import Dashboard from "./pages/Dashboard";
 import Income from "./pages/Income";
 import Expenses from "./pages/Expenses";
 import Profit from "./pages/Profit";
-import ProtectedRoute from "./components/ProtectedRoute"; // Added Import
+import ProtectedRoute from "./components/ProtectedRoute"; 
+import Tips from "./pages/Tips";
+
 
 function App() {
   return (
@@ -33,6 +35,11 @@ function App() {
           path="/profit" 
           element={<ProtectedRoute><Profit /></ProtectedRoute>} 
         />
+        <Route 
+          path="/tips" 
+          element={<ProtectedRoute><Tips /></ProtectedRoute>} 
+        />
+
       </Routes>
     </BrowserRouter>
   );
