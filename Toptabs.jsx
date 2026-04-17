@@ -40,7 +40,15 @@ export default function TopTabs() {
         Expenses
       </NavLink>
 
-      <button className={`${base} ${inactive}`}>Tips</button>
-    </div>
+      {/* ✅ FIXED Tips */}
+      <NavLink
+        to="/tips"
+        className={({ isActive }) =>
+          `${base} ${isActive ? activeGreen : inactive}`
+        }
+      >
+        Tips 🌾
+      </NavLink>
+    </div> 
   );
 }
